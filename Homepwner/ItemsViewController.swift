@@ -41,6 +41,8 @@ class ItemsViewController: UITableViewController {
         
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        
+        tableView.estimatedRowHeight = 60
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,6 +55,7 @@ class ItemsViewController: UITableViewController {
         if indexPath.row < itemStore.allItems.count {
             let item = itemStore.allItems[indexPath.row]
             cell.textLabel?.text = item.name
+            cell.textLabel?.font = cell.textLabel?.font.fontWithSize(20)
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
             
         } else {
@@ -61,6 +64,15 @@ class ItemsViewController: UITableViewController {
         }
         return cell
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == itemStore.allItems.count {
+            return 44
+        } else {
+            return 60
+        }
+    }
+    
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
