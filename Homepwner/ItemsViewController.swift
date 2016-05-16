@@ -59,8 +59,15 @@ class ItemsViewController: UITableViewController {
             cell.textLabel?.text = "No more items!"
             cell.detailTextLabel?.text = ""
         }
-        
-        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let item = itemStore.allItems[indexPath.row]
+            itemStore.removeItem(item)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
     }
 }
