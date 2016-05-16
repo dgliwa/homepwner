@@ -12,6 +12,22 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    
+    @IBAction func addNewItem(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func toggleEditingMode(sender: AnyObject) {
+        if editing {
+            sender.setTitle("Edit", forState: .Normal)
+            setEditing(false, animated: true)
+        } else {
+            sender.setTitle("Done", forState: .Normal)
+            setEditing(true, animated: true)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +44,12 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-        
+        //TODO: make cells bigger except for last cell.
         if indexPath.row < itemStore.allItems.count {
             let item = itemStore.allItems[indexPath.row]
             cell.textLabel?.text = item.name
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            
         } else {
             cell.textLabel?.text = "No more items!"
             cell.detailTextLabel?.text = ""
