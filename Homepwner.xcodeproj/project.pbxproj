@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2503BAA51CE56E8A001DB01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503BAA41CE56E8A001DB01F /* AppDelegate.swift */; };
-		2503BAA71CE56E8A001DB01F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503BAA61CE56E8A001DB01F /* ViewController.swift */; };
 		2503BAAA1CE56E8A001DB01F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2503BAA81CE56E8A001DB01F /* Main.storyboard */; };
 		2503BAAC1CE56E8A001DB01F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2503BAAB1CE56E8A001DB01F /* Assets.xcassets */; };
 		2503BAAF1CE56E8A001DB01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2503BAAD1CE56E8A001DB01F /* LaunchScreen.storyboard */; };
 		2503BAB71CE56F31001DB01F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503BAB61CE56F31001DB01F /* ItemsViewController.swift */; };
 		2544310E1CE94C930015E9EA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544310D1CE94C930015E9EA /* Item.swift */; };
+		254431101CE950940015E9EA /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544310F1CE950940015E9EA /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2503BAA11CE56E8A001DB01F /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2503BAA41CE56E8A001DB01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2503BAA61CE56E8A001DB01F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2503BAA91CE56E8A001DB01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2503BAAB1CE56E8A001DB01F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2503BAAE1CE56E8A001DB01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2503BAB01CE56E8A001DB01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2503BAB61CE56F31001DB01F /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = Homepwner/ItemsViewController.swift; sourceTree = SOURCE_ROOT; };
 		2544310D1CE94C930015E9EA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2544310F1CE950940015E9EA /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +60,12 @@
 			children = (
 				2503BAB61CE56F31001DB01F /* ItemsViewController.swift */,
 				2503BAA41CE56E8A001DB01F /* AppDelegate.swift */,
-				2503BAA61CE56E8A001DB01F /* ViewController.swift */,
 				2503BAA81CE56E8A001DB01F /* Main.storyboard */,
 				2503BAAB1CE56E8A001DB01F /* Assets.xcassets */,
 				2503BAAD1CE56E8A001DB01F /* LaunchScreen.storyboard */,
 				2503BAB01CE56E8A001DB01F /* Info.plist */,
 				2544310D1CE94C930015E9EA /* Item.swift */,
+				2544310F1CE950940015E9EA /* ItemStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2544310E1CE94C930015E9EA /* Item.swift in Sources */,
-				2503BAA71CE56E8A001DB01F /* ViewController.swift in Sources */,
 				2503BAB71CE56F31001DB01F /* ItemsViewController.swift in Sources */,
+				254431101CE950940015E9EA /* ItemStore.swift in Sources */,
 				2503BAA51CE56E8A001DB01F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
