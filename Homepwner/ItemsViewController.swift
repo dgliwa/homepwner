@@ -33,6 +33,23 @@ class ItemsViewController: UITableViewController {
         
     }
     
+    
+    override func tableView(tableView: UITableView,
+        canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+            if indexPath.section == 0 {
+                return true
+            }
+            return false
+    }
+    
+    override func tableView(tableView: UITableView,
+        canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+            if indexPath.section == 0 {
+                return true
+            }
+            return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +63,18 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count + 1
+        var numberOfRowsInSection: Int = 0
+        switch section {
+        case 0: numberOfRowsInSection = itemStore.allItems.count
+        case 1: numberOfRowsInSection = 1
+        default:
+            break
+        }
+        return numberOfRowsInSection
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -74,7 +102,17 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+        if(destinationIndexPath.row != itemStore.allItems.count + 1) {
+            itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath destinationIndexPath: NSIndexPath) -> NSIndexPath {
+        if(destinationIndexPath.section == sourceIndexPath.section) {
+            itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+            return destinationIndexPath
+        }
+        return sourceIndexPath
     }
     
     
