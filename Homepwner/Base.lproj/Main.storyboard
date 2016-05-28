@@ -51,21 +51,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="65.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoZ-IH-Cx0">
-                                            <rect key="frame" x="8" y="8" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoZ-IH-Cx0">
+                                            <rect key="frame" x="8" y="8" width="39.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePB-PZ-ayZ">
-                                            <rect key="frame" x="550" y="22" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="552" y="23" width="39.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8n-af-86o">
-                                            <rect key="frame" x="8" y="32" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="8" y="39" width="28.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -73,6 +73,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="l8n-af-86o" secondAttribute="bottom" constant="4.5" id="1l8-MZ-78Z"/>
                                         <constraint firstItem="ePB-PZ-ayZ" firstAttribute="centerY" secondItem="jh8-xF-TU0" secondAttribute="centerY" id="4EG-ry-gR9"/>
+                                        <constraint firstItem="l8n-af-86o" firstAttribute="top" secondItem="aoZ-IH-Cx0" secondAttribute="bottom" constant="3.5" id="6PL-n3-1qA"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ePB-PZ-ayZ" secondAttribute="trailing" id="9AL-Dr-DJ6"/>
                                         <constraint firstItem="l8n-af-86o" firstAttribute="leading" secondItem="aoZ-IH-Cx0" secondAttribute="leading" id="ETC-eP-bWc"/>
                                         <constraint firstItem="aoZ-IH-Cx0" firstAttribute="top" secondItem="jh8-xF-TU0" secondAttribute="topMargin" id="IkR-MU-tJt"/>
