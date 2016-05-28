@@ -59,7 +59,7 @@ class ItemsViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         
-        tableView.estimatedRowHeight = 60
+        tableView.estimatedRowHeight = 65
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,33 +78,32 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-        //TODO: make cells bigger except for last cell.
-        if indexPath.row < itemStore.allItems.count {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
+        if indexPath.section == 0 {
             let item = itemStore.allItems[indexPath.row]
-            cell.textLabel?.text = item.name
-            cell.textLabel?.font = cell.textLabel?.font.fontWithSize(20)
-            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            cell.nameLabel?.text = item.name
+            cell.nameLabel?.font = cell.textLabel?.font.fontWithSize(20)
+            cell.serialNumberLabel?.text = item.serialNumber
+            cell.valueLabel?.text = "$\(item.valueInDollars)"
             
         } else {
-            cell.textLabel?.text = "No more items!"
-            cell.detailTextLabel?.text = ""
+            cell.nameLabel?.text = "No more items!"
+            cell.serialNumberLabel?.text = ""
+            cell.valueLabel?.text = ""
         }
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == itemStore.allItems.count {
-            return 44
+        if indexPath.section == 1 {
+            return 40
         } else {
-            return 60
+            return 65
         }
     }
     
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        if(destinationIndexPath.row != itemStore.allItems.count + 1) {
-            itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
-        }
+        itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
     
     override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath destinationIndexPath: NSIndexPath) -> NSIndexPath {
