@@ -84,9 +84,13 @@ class ItemsViewController: UITableViewController {
         if indexPath.section == 0 {
             let item = itemStore.allItems[indexPath.row]
             cell.nameLabel?.text = item.name
-            cell.nameLabel?.font = cell.textLabel?.font.fontWithSize(20)
             cell.serialNumberLabel?.text = item.serialNumber
             cell.valueLabel?.text = "$\(item.valueInDollars)"
+            if item.valueInDollars < 50 {
+                cell.valueLabel.textColor = UIColor.greenColor()
+            } else {
+                cell.valueLabel.textColor = UIColor.redColor()
+            }
             
         } else {
             cell.nameLabel?.text = "No more items!"
