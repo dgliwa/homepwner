@@ -84,7 +84,7 @@
                                     <outlet property="nameLabel" destination="aoZ-IH-Cx0" id="KMA-PX-ySs"/>
                                     <outlet property="serialNumberLabel" destination="l8n-af-86o" id="YHo-Cd-I8Y"/>
                                     <outlet property="valueLabel" destination="ePB-PZ-ayZ" id="zxX-W7-bN2"/>
-                                    <segue destination="dQW-2e-5Cw" kind="show" id="iVi-Cd-txb"/>
+                                    <segue destination="dQW-2e-5Cw" kind="show" identifier="ShowItem" id="iVi-Cd-txb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="-116" y="240"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="T6o-Dd-fFW">
             <objects>
-                <viewController id="dQW-2e-5Cw" sceneMemberID="viewController">
+                <viewController id="dQW-2e-5Cw" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PD7-Mx-7wn"/>
                         <viewControllerLayoutGuide type="bottom" id="Rza-DS-hSH"/>
@@ -187,6 +187,12 @@
                             <constraint firstItem="Rza-DS-hSH" firstAttribute="top" secondItem="huT-9g-kf4" secondAttribute="bottom" constant="8" id="yrn-SU-NYC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="erC-bQ-05G" id="vaA-GX-Ane"/>
+                        <outlet property="nameField" destination="h5K-GQ-jIo" id="rkI-KY-1sI"/>
+                        <outlet property="serialField" destination="pLY-tQ-K1W" id="iP7-PN-PCO"/>
+                        <outlet property="valueField" destination="7sr-Rc-pVl" id="YGx-9N-Zdb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qiz-Cb-LG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
