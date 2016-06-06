@@ -20,11 +20,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-
     @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ChooseDate" {
+            let chooseDateController = segue.destinationViewController as! DatePickerController
+            chooseDateController.item = item
+            chooseDateController.dateFormatter = dateFormatter
+        }
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         nameField.text = item.name
