@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--Homepwner-->
         <scene sceneID="rON-qG-HNv">
             <objects>
                 <tableViewController id="07v-2E-MRZ" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="07v-2E-MRZ" id="7rT-dN-ybE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="sFr-y4-PGu"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="sFr-y4-PGu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3C-Bn-G42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
