@@ -127,6 +127,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dQW-2e-5Cw" id="GEy-Q2-3iw"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -143,6 +146,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dQW-2e-5Cw" id="Ch4-pw-Yph"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -159,6 +165,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="dQW-2e-5Cw" id="KBb-X0-918"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -167,6 +176,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erC-bQ-05G">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="406"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -181,12 +191,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="huT-9g-kf4" firstAttribute="leading" secondItem="40w-bB-OdN" secondAttribute="leadingMargin" id="7OA-Kw-22V"/>
                             <constraint firstItem="huT-9g-kf4" firstAttribute="top" secondItem="PD7-Mx-7wn" secondAttribute="bottom" constant="8" id="eos-el-zT4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="huT-9g-kf4" secondAttribute="trailing" id="rOK-68-g6s"/>
                             <constraint firstItem="Rza-DS-hSH" firstAttribute="top" secondItem="huT-9g-kf4" secondAttribute="bottom" constant="8" id="yrn-SU-NYC"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jVe-Sm-DBC" appends="YES" id="X2E-j7-1rC"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="date" destination="erC-bQ-05G" id="vaA-GX-Ane"/>
@@ -196,6 +210,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qiz-Cb-LG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jVe-Sm-DBC">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="dQW-2e-5Cw" id="eEE-DU-SpD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1398" y="240"/>
         </scene>
