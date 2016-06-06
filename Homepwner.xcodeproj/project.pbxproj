@@ -16,6 +16,7 @@
 		25071F291CFFD1740039A0F4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25071F281CFFD1740039A0F4 /* DetailViewController.swift */; };
 		25305B6F1D05D7A5003160F7 /* ItemTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25305B6E1D05D7A5003160F7 /* ItemTextField.swift */; };
 		25305B711D05DEDC003160F7 /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25305B701D05DEDC003160F7 /* DatePickerController.swift */; };
+		25305B731D062415003160F7 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25305B721D062415003160F7 /* ImageStore.swift */; };
 		2544310E1CE94C930015E9EA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544310D1CE94C930015E9EA /* Item.swift */; };
 		254431101CE950940015E9EA /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544310F1CE950940015E9EA /* ItemStore.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		25071F281CFFD1740039A0F4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		25305B6E1D05D7A5003160F7 /* ItemTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTextField.swift; sourceTree = "<group>"; };
 		25305B701D05DEDC003160F7 /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		25305B721D062415003160F7 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		2544310D1CE94C930015E9EA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2544310F1CE950940015E9EA /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				25071F281CFFD1740039A0F4 /* DetailViewController.swift */,
 				25305B6E1D05D7A5003160F7 /* ItemTextField.swift */,
 				25305B701D05DEDC003160F7 /* DatePickerController.swift */,
+				25305B721D062415003160F7 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				25305B6F1D05D7A5003160F7 /* ItemTextField.swift in Sources */,
 				254431101CE950940015E9EA /* ItemStore.swift in Sources */,
 				25071F291CFFD1740039A0F4 /* DetailViewController.swift in Sources */,
+				25305B731D062415003160F7 /* ImageStore.swift in Sources */,
 				25305B711D05DEDC003160F7 /* DatePickerController.swift in Sources */,
 				2503BAA51CE56E8A001DB01F /* AppDelegate.swift in Sources */,
 				25071F271CF9C3850039A0F4 /* ItemCell.swift in Sources */,

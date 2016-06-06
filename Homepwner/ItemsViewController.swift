@@ -10,9 +10,8 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     
-    //TODO: chapter 13 gold challenge
-
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,6 +40,7 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destinationViewController as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         }
     }
@@ -133,6 +133,7 @@ class ItemsViewController: UITableViewController {
             let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: { (action) ->
                 Void in
                     self.itemStore.removeItem(item)
+                    self.imageStore.deleteImageForKey(item.itemKey)
                     self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             })
             ac.addAction(deleteAction)
