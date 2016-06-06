@@ -8,18 +8,42 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var serialField: ItemTextField!
     @IBOutlet var nameField: ItemTextField!
     @IBOutlet var valueField: ItemTextField!
     @IBOutlet var date: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    
     var item: Item! {
         didSet {
             navigationItem.title = item.name
         }
     }
 
+    @IBAction func takePicture(sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = image
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
     }
