@@ -10,6 +10,8 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     
+    //TODO: chapter 13 gold challenge
+
     var itemStore: ItemStore!
     
     required init?(coder aDecoder: NSCoder) {
@@ -99,6 +101,7 @@ class ItemsViewController: UITableViewController {
             cell.nameLabel?.text = "No more items!"
             cell.serialNumberLabel?.text = ""
             cell.valueLabel?.text = ""
+            cell.userInteractionEnabled = false;
         }
         return cell
     }
