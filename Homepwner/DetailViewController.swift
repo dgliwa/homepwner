@@ -47,6 +47,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func removePhoto(sender: UIBarButtonItem) {
+        imageStore.deleteImageForKey(item.itemKey)
+        imageView.image = nil
+    }
+    
     @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
     }
