@@ -88,11 +88,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uor-Xj-yTi">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uor-Xj-yTi">
                                 <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="huT-9g-kf4">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="172.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="huT-9g-kf4">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="180"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ejI-uM-MI8">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -107,11 +107,17 @@
                                                         <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="53" y="0.0" width="227" height="30"/>
+                                                        </variation>
                                                         <connections>
                                                             <outlet property="delegate" destination="dQW-2e-5Cw" id="GEy-Q2-3iw"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tbm-U4-oey">
                                                 <rect key="frame" x="0.0" y="38" width="560" height="30"/>
@@ -126,11 +132,17 @@
                                                         <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="53" y="0.0" width="227" height="30"/>
+                                                        </variation>
                                                         <connections>
                                                             <outlet property="delegate" destination="dQW-2e-5Cw" id="Ch4-pw-Yph"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="38" width="280" height="30"/>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S8I-ne-qOb">
                                                 <rect key="frame" x="0.0" y="76" width="560" height="30"/>
@@ -145,46 +157,71 @@
                                                         <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="53" y="0.0" width="227" height="30"/>
+                                                        </variation>
                                                         <connections>
                                                             <outlet property="delegate" destination="dQW-2e-5Cw" id="KBb-X0-918"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="76" width="280" height="30"/>
+                                                </variation>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-PI-gE0">
-                                                <rect key="frame" x="0.0" y="114" width="560" height="20.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-PI-gE0">
+                                                <rect key="frame" x="0.0" y="114" width="560" height="28"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erC-bQ-05G">
-                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erC-bQ-05G">
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="28"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="124"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="114" width="280" height="124"/>
+                                                </variation>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XsX-2v-VPl">
-                                                <rect key="frame" x="0.0" y="142" width="560" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XsX-2v-VPl">
+                                                <rect key="frame" x="0.0" y="150" width="560" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-F4-BGr">
                                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
                                                         <state key="normal" title="Change Date"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                        </variation>
                                                         <connections>
                                                             <segue destination="22k-hh-CAC" kind="show" identifier="ChooseDate" id="hs5-LX-4Xm"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="246" width="280" height="30"/>
+                                                </variation>
                                             </stackView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="h5K-GQ-jIo" firstAttribute="leading" secondItem="pLY-tQ-K1W" secondAttribute="leading" id="gAj-GM-Hok"/>
                                             <constraint firstItem="pLY-tQ-K1W" firstAttribute="leading" secondItem="7sr-Rc-pVl" secondAttribute="leading" id="tHm-qO-FEc"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="276"/>
+                                        </variation>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Akl-2D-2cm">
-                                        <rect key="frame" x="0.0" y="172" width="560" height="303.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Akl-2D-2cm">
+                                        <rect key="frame" x="0.0" y="188" width="560" height="288"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="280" y="0.0" width="280" height="276"/>
+                                        </variation>
                                     </imageView>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5T-MF-6aJ">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
