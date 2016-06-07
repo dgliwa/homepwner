@@ -13,19 +13,22 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     var imageStore: ImageStore!
     
+    
+    // MARK: initializer
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
         navigationItem.leftBarButtonItem = editButtonItem()
     }
     
-    @IBAction func addNewItem(sender: AnyObject) {
-        let newItem = itemStore.createItem()
+    // MARK: view life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        if let index = itemStore.allItems.indexOf(newItem) {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        }
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,6 +47,20 @@ class ItemsViewController: UITableViewController {
             }
         }
     }
+
+    // MARK: Actions
+    
+    @IBAction func addNewItem(sender: AnyObject) {
+        let newItem = itemStore.createItem()
+        
+        if let index = itemStore.allItems.indexOf(newItem) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+    
+    
+    // MARK: UITableViewDataSource methods
     
     override func tableView(tableView: UITableView,
         canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -59,13 +76,6 @@ class ItemsViewController: UITableViewController {
                 return true
             }
             return false
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,8 +127,7 @@ class ItemsViewController: UITableViewController {
         }
         return sourceIndexPath
     }
-    
-    
+        
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let item = itemStore.allItems[indexPath.row]
