@@ -16,7 +16,7 @@ class ImageStore {
         cache.setObject(image, forKey: key)
         
         let imageURL = imageURLForKey(key)
-        if let data = UIImagePNGRepresentation(image) {
+        if let data = UIImageJPEGRepresentation(image, 0.5) {
             data.writeToURL(imageURL, atomically: true)
         }
     }
